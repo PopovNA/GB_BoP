@@ -1,0 +1,12 @@
+<meta charset="utf-8">
+<script>
+
+    var summa = +prompt("Введите сумму вклада:");
+    var procent = +prompt("Введите годовой процент:");
+    
+    for(var srok = 1; srok <= 5; srok++){
+        summa += summa*procent/100;
+        document.write("На " + srok + " год вклад составит: " + summa.toFixed(2) + "<br>");
+    }
+
+</script>

@@ -1,0 +1,34 @@
+<meta charset="utf-8">
+<script>
+
+    var answerCount = 0;
+    
+    var userAnswer = prompt("Отгадай загадку. Зимой и летом одним цветом:");
+    if((userAnswer.toLowerCase() == "елка")
+        || (userAnswer.toLowerCase() == "ель")
+        || (userAnswer.toLowerCase() == "сосна")){
+        alert("Поздравляю!");
+        answerCount++;
+    } else alert("Неправильно.");
+    
+    var userAnswer = prompt("Висит груша, нельзя скушать:");
+    if(userAnswer.toLowerCase() == "лампочка"){
+        alert("Поздравляю!");
+        answerCount++;
+    } else alert("Неправильно.");
+    
+    var userAnswer = prompt("Два кольца, два конца, посредине гвоздик:");
+    if(userAnswer.toLowerCase() == "ножницы"){
+        alert("Поздравляю!");
+        answerCount++;
+    } else alert("Неправильно.");
+
+    var userAnswer = prompt("Сто одежек и все без застежек:");
+    if(userAnswer.toLowerCase() == "капуста"){
+        alert("Поздравляю!");
+        answerCount++;
+    } else alert("Неправильно.");
+    
+    document.write("Game over. Correct answer - " + answerCount);
+
+</script>

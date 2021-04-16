@@ -1,0 +1,42 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+    function getRandomNumber(max){
+        //var rand = Math.round(Math.random() * max);
+        //return rand;
+        return rand = Math.round(Math.random() * max);
+        //какие-то команды, которые уже не выполнятся
+    }
+    
+    function max(a, b){
+        if(a >= b){
+            return a;
+        } else{
+            return b;
+        }
+        alert("Никогда не выполнится.");
+    }
+    
+    //факториал 5 равен 1*2*3*4*5
+    function factorial(n){
+        var result = 1;
+        for(var i = 1; i <= n; i++){
+            result *= i;
+        }
+        return result;
+    }
+    
+    function recursiveFactorial(n){
+        if(n == 0)
+            return 1;
+        else
+            return recursiveFactorial(n - 1) * n;
+    }
+    
+    var rf = recursiveFactorial(4);
+    var f = factorial(5);
+    var n = getRandomNumber(100);
+    var m = getRandomNumber(4);
+    var a = max(n, m);
+
+</script>

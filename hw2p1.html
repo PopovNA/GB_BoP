@@ -1,33 +1,34 @@
 <meta charset="utf-8">
 <script>
 
+    var answer = 0;
     var answerCount = 0;
+    var mysteryArray = [
+        ["Отгадай загадку. Зимой и летом одним цветом:", "елка", "ель", "сосна"],
+        ["Висит груша, нельзя скушать:", "лампочка"],
+        ["Два кольца, два конца, посредине гвоздик:", "ножницы"],
+        ["Сто одежек и все без застежек:", "капуста"]
+    ];
     
-    var userAnswer = prompt("Отгадай загадку. Зимой и летом одним цветом:");
-    if((userAnswer.toLowerCase() == "елка")
-        || (userAnswer.toLowerCase() == "ель")
-        || (userAnswer.toLowerCase() == "сосна")){
-        alert("Поздравляю!");
-        answerCount++;
-    } else alert("Неправильно.");
+    function roundOfGame(a){
+        var countCorrectAnswer = 0;
+        var userAnswer = prompt(a[0]);
+        for(var i = 1; i < a.length; i++){
+            if(userAnswer.toLowerCase() == a[i])
+                countCorrectAnswer++;
+        }
+        return countCorrectAnswer;
+    }
     
-    var userAnswer = prompt("Висит груша, нельзя скушать:");
-    if(userAnswer.toLowerCase() == "лампочка"){
-        alert("Поздравляю!");
-        answerCount++;
-    } else alert("Неправильно.");
+    alert("Отгадай загадки.");
     
-    var userAnswer = prompt("Два кольца, два конца, посредине гвоздик:");
-    if(userAnswer.toLowerCase() == "ножницы"){
-        alert("Поздравляю!");
-        answerCount++;
-    } else alert("Неправильно.");
-
-    var userAnswer = prompt("Сто одежек и все без застежек:");
-    if(userAnswer.toLowerCase() == "капуста"){
-        alert("Поздравляю!");
-        answerCount++;
-    } else alert("Неправильно.");
+    for(i = 0; i < mysteryArray.length; i++){
+        answer = roundOfGame(mysteryArray[i]);
+        if(answer > 0){
+            alert("Поздравляю!");
+            answerCount++;
+        }else alert("Неправильно.");
+    }
     
     document.write("Game over. Correct answer - " + answerCount);
 

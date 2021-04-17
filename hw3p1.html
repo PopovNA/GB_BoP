@@ -1,0 +1,57 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+    function getOneToN(n){
+        var a = [];
+        for(var i = 1; i <= n; i++){
+            a.push(i);
+        }
+        return a;
+    }
+    
+    function sumOfArray(a){
+        var sum = 0;
+        for(var i = 0; i < a.length; i++){
+            sum += a[i];
+        }
+        return sum;
+    }
+    
+    function maxOfArray(a){
+        var max = a[0];
+        for(var i = 1; i < a.length; i++){
+            if(a[i] > max){
+                max = a[i];
+            }
+        }
+        return max;
+    }
+
+    function minOfArray(a){
+        var min = a[0];
+        for(var i = 1; i < a.length; i++){
+            if(a[i] < min){
+                min = a[i];
+            }
+        }
+        return min;
+    }
+    
+    function chetOfArray(a){
+        var b = [];
+        for(var i = 0; i < a.length; i++){
+            if((a[i] % 2) == 0){
+                b.push(a[i]);
+            }
+        }
+        return b;
+    }
+
+    var n = +prompt("Введите число:");
+    document.write("Последовательность от 1 до N: " + getOneToN(n));
+    document.write("<br>Сумма чисел массива: " + sumOfArray(getOneToN(n)));
+    document.write("<br>Максимальное число массива: " + maxOfArray(getOneToN(n)));
+    document.write("<br>Минимальное число массива: " + minOfArray(getOneToN(n)));
+    document.write("<br>Четные числа массива: " + chetOfArray(getOneToN(n)));
+
+</script>
